@@ -1,0 +1,94 @@
+:root {
+    --main-mustard: #EBC95E; /* Halvány mustársárga */
+    --baby-blue: #D1E9F6;
+    --baby-pink: #F9D1D1;
+    --dark-text: #2C3E50;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+}
+
+header {
+    background-color: var(--main-mustard);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid var(--white);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 10px solid var(--main-mustard);
+}
+
+h2 {
+    color: var(--dark-text);
+    border-bottom: 2px solid var(--baby-blue);
+    padding-bottom: 0.5rem;
+}
+
+.highlight-blue { background-color: var(--baby-blue); padding: 1rem; border-radius: 10px; }
+.highlight-pink { background-color: var(--baby-pink); padding: 1rem; border-radius: 10px; }
+
+.poster-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* IDE KELL MAJD A PLAKÁT FÁJLNEVE */
+.poster-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .data-grid { grid-template-columns: 1fr; }
+}
+
+.placeholder-box {
+    background: #eee;
+    border: 2px dashed #ccc;
+    padding: 2rem;
+    text-align: center;
+    color: #888;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #777;
+}
