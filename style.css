@@ -1,7 +1,7 @@
 :root {
     --main-mustard: #EBC95E; /* Halvány mustársárga */
     --baby-blue: #D1E9F6;
-    --baby-pink: #F9D1D1;
+    --baby-pink: #FFD7E3;
     --dark-text: #2C3E50;
     --white: #ffffff;
 }
@@ -12,7 +12,7 @@ body {
     color: var(--dark-text);
     margin: 0;
     padding: 0;
-    background-color: #fdfdfd;
+    background-color: #ffffc5;
 }
 
 header {
@@ -47,12 +47,11 @@ section {
 
 h2 {
     color: var(--dark-text);
-    border-bottom: 2px solid var(--baby-blue);
+    border-bottom: 2px solid var(--baby-pink);
     padding-bottom: 0.5rem;
 }
 
 .highlight-blue { background-color: var(--baby-blue); padding: 1rem; border-radius: 10px; }
-.highlight-pink { background-color: var(--baby-pink); padding: 1rem; border-radius: 10px; }
 
 .poster-container {
     text-align: center;
