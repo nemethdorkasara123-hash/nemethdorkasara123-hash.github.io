@@ -2,91 +2,42 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digitális Detox - Projektterv</title>
+    <title>Digitális Detox - Kezdőlap</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('tn4-latvanyterv.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .hero h1 { 
+            font-size: 4rem; 
+            /* Itt hivatkozunk a CSS-ben megadott mustársárgára */
+            color: var(--bright-mustard); 
+            text-shadow: 0 5px 15px rgba(0,0,0,0.7); 
+            font-weight: 800; /* Kicsit vastagabb, hogy jobban kijöjjön a színe a háttéren */
+        }
+    </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html">Kezdőlap</a>
+        <a href="koncepcio.html">Koncepció</a>
+        <a href="arculat.html">Arculat</a>
+        <a href="igenyfelmeres.html">Igényfelmérés</a>
+        <a href="reflexio.html">Reflexió</a>
+    </nav>
 
-<header>
-    <h1>Digitális Detox Projektterv</h1>
-    <p>Pannon Egyetem | 2026. Június 5.</p>
-</header>
-
-<div class="container">
-
-    <!-- 1. Részletes eseményterv -->
-    <section id="koncepcio">
-        <h2>1. Szakmai Koncepció</h2>
-        <h3>Cím és vízió</h3>
-        <p>Digitális detox nap a Pannonon - Vissza a természethez </p>
-        
-        <div class="highlight-blue">
-            <h3>Célcsoport és szükségletek</h3>
-            <p>A Pannon Egyetem hallgatói és tanárai (18 éves kortól) </p>
-        </div>
-
-        <h3>Részletes programmenet</h3>
-        <ul>
-            <li><strong>10:00:</strong> Megnyitó, telefonok leadása</li>
-            <li><strong>10:30:</strong> Ismerkedős játékok</li>
-            <li><strong>11:00:</strong> Csapatépítő játékok</li>
-            <li><strong>12:30:</strong> Ebédszünet</li>
-            <li><strong>14:00:</strong> Kreatív workshop (rajz, festés, kézműveskedés) </li>
-            <li><strong>15:30:</strong> Különböző sportprogramok (foci, röplabda, kidobós, meta) </li>
-            <li><strong>17:00:</strong> Kerekasztal beszélgatés: "Milyen volt offline?"</li>
-            <li><strong>18:00:</strong> Telefonok visszaadása</li>
-            <li><strong>20:00-2:00:</strong> Program megünneplése, after buli</li>
-        </ul>
-
-        <h3>Helyszín és logisztika</h3>
-        <p>8200, Veszprém Hóvirág utca 1 (ActiCity Tánc és Mozgásművészeti Központ).</p>
-    </section>
-
-    <!-- 2. Az esemény vizuális arculata -->
-    <section id="plakat">
-        <h2>2. Vizuális Arculat</h2>
-        <div class="poster-container">
-            <!-- Cseréld ki az src-t a saját plakátod fájlnevére! -->
-            <img src="59c8476c-2550-459e-8b17-ea4eca9f2e9b.jpg" alt="Digitális Detox Plakát">
-            <p><small>Használt eszközök: Canva</small></p>
-        </div>
-    </section>
-
-    <!-- 3. Adatvezérelt tervezés -->
-    <section id="adatok">
-        <h2>3. Igényfelmérés és Analízis</h2>
-        <p>A programtervet egy 20 fős reprezentatív kérdőíves felmérés alapozta meg.</p>
-        
-        <div class="data-grid">
-            <div class="placeholder-box">
-                [IDE ILLESZD A KÉRDŐÍV LINKJÉT VAGY KÉPÉT]
-            </div>
-            <div class="placeholder-box">
-                [IDE ILLESZD A DIAGRAMOT AZ ELEMZÉSRŐL]
-            </div>
-        </div>
-        <p><em>Elemzés:</em> Az adatokból kiderült, hogy a válaszadók 85%-a érzi úgy, hogy túl sok időt tölt a telefonjával, és szívesen részt venne egy közösségi sportprogramban.</p>
-    </section>
-
-    <!-- 4. Szakmai reflexió -->
-    <section id="reflexio" class="highlight-pink">
-        <h2>4. Szakmai Reflexió</h2>
-        <p><em>Ebben a részben (a feladatkiírás szerint) nem használható AI. Írd le a saját tapasztalataidat:</em></p>
-        <ul>
-            <li>Hogyan változott a digitális eszközökhöz való viszonyod a tervezés során?</li>
-            <li>Mi volt a legnagyobb kihívás (pl. HTML kódolás, vizuális tervezés)?</li>
-            <li>Hogyan fogod használni ezeket a képességeket közösségszervezőként?</li>
-        </ul>
-        <p>[Saját, egyéni gondolataid helye...]</p>
-    </section>
-
-</div>
-
-<footer>
-    <p>&copy; 2026 - Digitális Közösségi Projektterv | Készítette: Németh Dorka Sára</p>
-</footer>
-
+    <div class="hero">
+        <h1>Digitális Detox a Pannonon</h1>
+    </div>
 </body>
 </html>

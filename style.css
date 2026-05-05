@@ -1,93 +1,115 @@
+/* Globális beállítások - Frissített nyári paletta */
 :root {
-    --main-mustard: #EBC95E; /* Halvány mustársárga */
-    --baby-blue: #D1E9F6;
-    --baby-pink: #FFD7E3;
-    --dark-text: #2C3E50;
-    --white: #ffffff;
+    --bright-mustard: #FFDB58; /* Élénk mustársárga a fejléchez */
+    --pastel-yellow: #FFF9E3;  /* Pasztellsárga a háttérnek */
+    --baby-blue: #E1F5FE;      /* Babakék a szövegdobozoknak */
+    --baby-pink: #FCE4EC;      /* Babarózsaszín a kereteknek/vonalaknak */
+    --dark-text: #444;
+    --border-pink: #F8BBD0;    /* Erősebb rózsaszín a keretekhez */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--pastel-yellow); /* Pasztellsárga háttér */
+    color: var(--dark-text);
     line-height: 1.6;
-    color: var(--dark-text);
-    margin: 0;
-    padding: 0;
-    background-color: #ffffc5;
 }
 
-header {
-    background-color: var(--main-mustard);
-    padding: 3rem 1rem;
-    text-align: center;
-    border-bottom: 5px solid var(--white);
+/* Navigáció - Élénk mustársárga fejléccel */
+nav {
+    background-color: var(--bright-mustard); /* Élénk mustársárga */
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 4px solid var(--border-pink); /* Rózsaszín keret alul */
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    color: var(--white);
+nav a {
+    text-decoration: none;
+    color: #000; /* Fekete szöveg a jobb olvashatóságért a sárgán */
+    margin: 0 1.5rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
 }
 
+nav a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Tartalmi elrendezés */
 .container {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-section {
-    background: var(--white);
+    max-width: 1000px;
+    margin: 3rem auto;
     padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-left: 10px solid var(--main-mustard);
 }
 
-h2 {
-    color: var(--dark-text);
-    border-bottom: 2px solid var(--baby-pink);
-    padding-bottom: 0.5rem;
+/* Szövegdobozok - Babakék háttérrel és rózsaszín kerettel */
+.card {
+    background: var(--baby-blue); /* Babakék szövegdoboz */
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 3px solid var(--border-pink); /* Babarózsaszín keret */
+    box-shadow: 8px 8px 0px var(--baby-pink); /* "Pop" hatású árnyék */
 }
 
-.highlight-blue { background-color: var(--baby-blue); padding: 1rem; border-radius: 10px; }
-
-.poster-container {
+h1, h2, h3 {
     text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Vízszintes vonalak (HR) - Babarózsaszín */
+hr {
+    border: 0;
+    height: 3px;
+    background-color: var(--border-pink);
     margin: 2rem 0;
+    border-radius: 5px;
 }
 
-/* IDE KELL MAJD A PLAKÁT FÁJLNEVE */
-.poster-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.data-grid {
+/* Képek és rácsok */
+.grid-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
-@media (max-width: 600px) {
-    .data-grid { grid-template-columns: 1fr; }
+.img-placeholder {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    border: 2px dashed var(--border-pink); /* Rózsaszín szaggatott keret */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    margin-bottom: 1rem;
 }
 
-.placeholder-box {
-    background: #eee;
-    border: 2px dashed #ccc;
-    padding: 2rem;
-    text-align: center;
-    color: #888;
+img {
+    max-width: 100%;
+    border-radius: 15px;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 footer {
     text-align: center;
     padding: 2rem;
     font-size: 0.9rem;
-    color: #777;
+    font-weight: 600;
+    color: var(--dark-text);
 }
