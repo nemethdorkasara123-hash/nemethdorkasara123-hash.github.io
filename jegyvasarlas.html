@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Jegyvásárlás - Digitális Detox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: var(--pastel-yellow);">
+    <nav>
+        <a href="index.html">Kezdőlap</a>
+        <a href="koncepcio.html">Koncepció</a>
+        <a href="arculat.html">Arculat</a>
+        <a href="igenyfelmeres.html">Igényfelmérés</a>
+        <a href="jegyvasarlas.html">Jegyvásárlás</a>
+        <a href="reflexio.html">Reflexió</a>
+    </nav>
+
+    <div class="container">
+        <div class="card" style="text-align: center;">
+            <h2>Biztosítsd a helyed!</h2>
+            <p>Vegyél részt te is a Pannon Egyetem legnagyobb offline eseményén.</p>
+            
+            <div style="margin: 2rem 0; padding: 1rem; background: var(--bright-mustard); border-radius: 15px; border: 2px solid var(--border-pink);">
+                <h3 style="margin: 0; color: #333;">Egységár: 2000 Ft / fő</h3>
+            </div>
+
+            <div class="quantity-selector">
+                <label for="tickets" style="font-weight: 600;">Jegyek száma:</label><br><br>
+                <input type="number" id="tickets" class="quantity-input" value="1" min="1" max="10" oninput="calculateTotal()" style="background: white;">
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.5rem;">Fizetendő: <span id="total-price" style="color: #d81b60;">2000</span> Ft</h3>
+            </div>
+
+            <button class="btn-cart" onclick="alert('Sikeresen a kosárba tetted!')">Kosárba teszem</button>
+            
+            <p style="margin-top: 1.5rem;">
+                <small>A jegyeket PDF formátumban küldjük el az egyetemi e-mail címedre.</small>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            const pricePerTicket = 2000;
+            const quantity = document.getElementById('tickets').value;
+            const total = pricePerTicket * quantity;
+            document.getElementById('total-price').innerText = total;
+        }
+    </script>
+</body>
+</html>
